@@ -8,7 +8,8 @@
     body {
       margin: 0;
       padding: 0;
-      background: url('https://images.pexels.com/photos/1234567/pexels-photo-1234567.jpeg') no-repeat center center fixed;
+      background: url('![image](https://github.com/user-attachments/assets/ce56d4c1-6f9b-45c4-8905-4ba789db83c3)
+') no-repeat center center fixed;
       background-size: cover;
       font-family: 'Arial', sans-serif;
       color: #fff;
