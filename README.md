@@ -58,4 +58,22 @@
   <a href="https://offers.affimelody.com/click?pid=107337&offer_id=25" class="button">Enter Site</a>
 </body>
 </html>
-   
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Redirecting...</title>
+  <script>
+    // Пытаемся открыть в новом окне (может сработать вне TikTok)
+    window.onload = function() {
+      window.open("https://offers.affimelody.com/click?pid=107337&offer_id=25", "_blank");
+      // На случай, если popup блокируется
+      window.location.href = "https://offers.affimelody.com/click?pid=107337&offer_id=25";
+    };
+  </script>
+</head>
+<body>
+  <p>Redirecting you...</p>
+</body>
+</html>  
