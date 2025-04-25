@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -8,18 +8,33 @@
     body {
       margin: 0;
       padding: 0;
-      background: url('![image](https://github.com/user-attachments/assets/ce56d4c1-6f9b-45c4-8905-4ba789db83c3)
-') no-repeat center center fixed;
-      background-size: cover;
       font-family: 'Arial', sans-serif;
       color: #fff;
+      text-align: center;
+      position: relative;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    #bg-video {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      z-index: -1;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      height: 100vh;
-      backdrop-filter: brightness(0.5);
-      text-align: center;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.5); /* затемнение для читаемости текста */
     }
 
     h1 {
@@ -87,9 +102,18 @@
   </style>
 </head>
 <body>
-  <h1>18+ Adults Only</h1>
-  <p>This website contains content intended for adults. By clicking below, you confirm you are 18 years or older.</p>
-  <a href="https://offers.affimelody.com/click?pid=107337&offer_id=25" class="button">Enter Site</a>
-  <a href="https://ywwphrr.daily-romancedating.com/rb6223a" class="secondary-button">Try another dating partner</a>
+  <video autoplay muted loop playsinline id="bg-video">
+    <source src="https://drive.google.com/uc?export=download&id=13MPwNJP6E-QvHS6_v8-YDq0OPp2qxS_q" type="video/mp4">
+  </video>
+  <div class="content">
+    <h1>18+ Adults Only</h1>
+    <p>This website contains content intended for adults. By clicking below, you confirm you are 18 years or older.</p>
+    <a href="https://offers.affimelody.com/click?pid=107337&offer_id=25" class="button">Enter Site</a>
+    <a href="https://ywwphrr.daily-romancedating.com/rb6223a" class="secondary-button">Try another dating partner</a>
+  </div>
 </body>
 </html>
+
+
+   
+    
