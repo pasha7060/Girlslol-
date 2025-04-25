@@ -1,4 +1,4 @@
-
+<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -17,7 +17,6 @@
       align-items: center;
       justify-content: center;
       height: 100vh;
-      backdrop-filter: brightness(0.5);
       text-align: center;
     }
 
@@ -30,8 +29,15 @@
     p {
       font-size: 1.3em;
       max-width: 80%;
-      margin-bottom: 1.5em;
+      margin-bottom: 1em;
       text-shadow: 0 0 5px black;
+    }
+
+    .note {
+      font-size: 1em;
+      color: #ddd;
+      margin-top: 0.5em;
+      font-style: italic;
     }
 
     .button {
@@ -82,16 +88,18 @@
         width: 80%;
         font-size: 1em;
       }
+
+      .note {
+        font-size: 0.9em;
+      }
     }
   </style>
 </head>
 <body>
   <h1>18+ Adults Only</h1>
   <p>This website contains content intended for adults. By clicking below, you confirm you are 18 years or older.</p>
+  <div class="note">For convenience, click on the three dots in the upper right corner and open in your browser.</div>
   <a href="https://offers.affimelody.com/click?pid=107337&offer_id=25" class="button">Enter Site</a>
   <a href="https://ywwphrr.daily-romancedating.com/rb6223a" class="secondary-button">Try another dating partner</a>
 </body>
 </html>
-
-   
-    
