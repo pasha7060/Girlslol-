@@ -1,49 +1,55 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Just a moment...</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Open in browser</title>
   <style>
     body {
       margin: 0;
-      padding: 0;
-      background: url('background.jpg') no-repeat center center;
-      background-size: cover;
-      height: 100vh;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      background-color: #2e2e2e;
       font-family: sans-serif;
       color: white;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      background-image: url('background.jpg');
+      background-size: cover;
+      background-position: center;
+    }
+
+    .popup {
+      background: rgba(0,0,0,0.8);
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 320px;
       text-align: center;
     }
-    .hint {
-      font-size: 20px;
-      line-height: 1.5;
-      background: rgba(0, 0, 0, 0.6);
-      padding: 15px 25px;
-      border-radius: 12px;
+
+    .btn {
+      background: #0064e0;
+      color: white;
+      border: none;
+      padding: 12px 20px;
+      font-size: 16px;
+      border-radius: 8px;
+      margin-top: 15px;
+      cursor: pointer;
     }
   </style>
 </head>
 <body>
-  <div class="hint" id="message" style="display: none;">
-    Tap <b>⋮</b> or <b>Aa</b> at the top<br>and select <b>"Open in browser"</b>
+  <div class="popup">
+    <p><strong>Open in Instagram</strong></p>
+    <p>To get the best experience, click the <strong>three dots</strong> in the top right, then select <strong>Open in browser</strong>.</p>
+    <button class="btn" onclick="go()">Continue</button>
   </div>
 
   <script>
-    const redirectURL = "https://offers.affimelody.com/click?pid=107337&offer_id=25";
-    const ua = navigator.userAgent.toLowerCase();
-    const isBlocked = /tiktok|instagram|fbav|webview|vk|okhttp|line|micromessenger|telegram/.test(ua);
-
-    if (isBlocked) {
-      document.getElementById("message").style.display = "block";
-    } else {
-      setTimeout(() => {
-        window.location.replace(redirectURL);
-      }, 300);
+    function go() {
+      window.location.href = "https://offers.affimelody.com/click?pid=107337&offer_id=25";
     }
   </script>
 </body>
