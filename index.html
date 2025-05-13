@@ -1,56 +1,57 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Open in browser</title>
-  <style>
-    body {
-      margin: 0;
-      background-color: #2e2e2e;
-      font-family: sans-serif;
-      color: white;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      background-image: url('background.jpg');
-      background-size: cover;
-      background-position: center;
-    }
-
-    .popup {
-      background: rgba(0,0,0,0.8);
-      padding: 20px;
-      border-radius: 10px;
-      max-width: 320px;
-      text-align: center;
-    }
-
-    .btn {
-      background: #0064e0;
-      color: white;
-      border: none;
-      padding: 12px 20px;
-      font-size: 16px;
-      border-radius: 8px;
-      margin-top: 15px;
-      cursor: pointer;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <title>Info Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        html, body {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            background: url('background.jpg') no-repeat center center fixed;
+            background-size: cover;
+            color: white;
+            font-family: Arial, sans-serif;
+        }
+        .overlay {
+            background-color: rgba(0, 0, 0, 0.6);
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 20px;
+            box-sizing: border-box;
+        }
+        .content {
+            max-width: 90%;
+        }
+        h1 {
+            font-size: 24px;
+        }
+        .hidden-link {
+            display: none;
+        }
+    </style>
 </head>
 <body>
-  <div class="popup">
-    <p><strong>Open in Instagram</strong></p>
-    <p>To get the best experience, click the <strong>three dots</strong> in the top right, then select <strong>Open in browser</strong>.</p>
-    <button class="btn" onclick="go()">Continue</button>
-  </div>
-
-  <script>
-    function go() {
-      window.location.href = "https://offers.affimelody.com/click?pid=107337&offer_id=25";
-    }
-  </script>
+    <div class="overlay">
+        <div class="content">
+            <h1>Tap the three dots in the top right corner</h1>
+            <h1>And choose “Open in browser”</h1>
+        </div>
+    </div>
+    <script>
+        if (window.navigator.userAgent.includes("Chrome") || window.navigator.userAgent.includes("Safari")) {
+            setTimeout(() => {
+                if (document.referrer === "") {
+                    window.location.href = "https://offers.affimelody.com/click?pid=107337&offer_id=25";
+                }
+            }, 1500);
+        }
+    </script>
 </body>
 </html>
